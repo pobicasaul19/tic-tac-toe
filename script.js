@@ -18,8 +18,6 @@ const restartButton = document.getElementById('restartButton')
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
 let circleTurn
 
-startGame()
-
 restartButton.addEventListener('click', startGame)
 
 function startGame () {
@@ -32,6 +30,8 @@ function startGame () {
     setBoardHoverClass()
     winningMassageElement.classList.remove('show')
 }
+
+startGame()
 
 function handleClick(e) {
     const cell = e. target
@@ -51,8 +51,8 @@ function endGame(draw) {
     if ( draw ) {
       winningMessageTextElement.innerText = 'Draw!'
     } else {
-      winningMessageTextElement.innerText = '${circleTurn ? "O" : "X"} Wins!'
-    }
+      winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Wins!`
+    } 
     winningMassageElement.classList.add('show')
 }
 

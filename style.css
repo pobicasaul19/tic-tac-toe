@@ -6,8 +6,8 @@
 
 :root
 {
-    --cell-size: 100px;
-    --mark-size: calc(var(--cell-size)* .5);
+    --cell-size: 150px;
+    --mark-size: calc(var(--cell-size)* .4);
 }
 
 body
@@ -17,12 +17,15 @@ body
     
 }
 
-h1{
+h1 
+{
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 5vw;
-    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+    margin-top: 150px;
 }
 
 .board 
@@ -41,12 +44,10 @@ h1{
 {
     width: var(--cell-size);
     height: var(--cell-size);
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    border: 1px solid white;
+    border: 2px solid rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -138,9 +139,9 @@ h1{
 
 .winning-message button 
 {
-    font-size: 30px;
+    font-size: 5vh;
     background-color: white;
-    border: 1px solid black;
+    border: 2px solid black;
     cursor: pointer;
     padding: .25em .5em;
     border-radius: 20px;
@@ -158,6 +159,7 @@ h1{
 {
     display: flex;
 }
+
 
 
 
